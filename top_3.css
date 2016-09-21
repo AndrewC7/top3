@@ -1,0 +1,42 @@
+#bodywrap {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+}
+
+#head, #main, .aside1, .aside2, #foot {
+  flex: 1 100%;
+}
+
+#head {
+  background: lightgreen;
+}
+
+#main {
+  background: cyan;
+}
+
+.aside1 {
+  background: red;
+}
+
+.aside2 {
+  background: hotpink;
+}
+
+#foot {
+  background: orange;
+}
+
+@media all and (min-width: 600px) {
+  .aside { flex: 1 auto; }
+}
+
+@media all and (min-width: 900px)  {
+  #main { flex: 2;}
+  #head {order: 1}
+  .aside1 {order: 2}
+  #main {order: 3}
+  .aside2 {order: 4}
+  #foot {order: 5}
+}
